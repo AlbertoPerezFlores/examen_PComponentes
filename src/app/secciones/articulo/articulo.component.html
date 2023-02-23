@@ -1,0 +1,11 @@
+<div class="card text-center bg-light mb-2 mr-2">
+  <a>
+      <img src="{{articulo.imagen}}" class="card-img-top">
+  </a>
+  <div class="card-body">
+      <h5 class="card-title">{{articulo.nombre}}</h5>
+      <p class="card-text">{{articulo.precio}}€</p>
+      <a class="btn btn-primary" *ngIf="articulo.stock">Comprar</a>
+      <a class="btn btn-warning" *ngIf="!articulo.stock">Sin stock</a>
+  </div>
+</div>
