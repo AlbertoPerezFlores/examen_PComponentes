@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CompraService } from 'src/app/compra.service';
 
 @Component({
   selector: 'app-articulo',
@@ -7,6 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ArticuloComponent {
   @Input() articulo:any
-    constructor() { }
+    constructor(private carrito:CompraService) { }
+
+    addToCarrito(articulo:any){
+      this.carrito.addArticuloToCarrito(articulo)
+    }
 
 }

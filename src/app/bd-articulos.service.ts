@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CompraService } from './compra.service';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class BdArticulosService {
 
    getArticulos(){
       return this.articulos
+
    }
 
     getCategorias(){
@@ -35,4 +37,5 @@ export class BdArticulosService {
     getFabricantes(){
       return this.fabricantes
     }
+
 }

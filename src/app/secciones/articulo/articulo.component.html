@@ -5,7 +5,7 @@
   <div class="card-body">
       <h5 class="card-title">{{articulo.nombre}}</h5>
       <p class="card-text">{{articulo.precio}}€</p>
-      <a class="btn btn-primary" *ngIf="articulo.stock">Comprar</a>
+      <a class="btn btn-primary" *ngIf="articulo.stock" (click)="addToCarrito(articulo)" >Comprar</a>
       <a class="btn btn-warning" *ngIf="!articulo.stock">Sin stock</a>
   </div>
 </div>
